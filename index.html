@@ -1,13 +1,353 @@
-<!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>欢迎来到mattester</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客详情</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"> -->
+    <link rel="stylesheet" href="static/semantic/semantic.min.css">
+<!--    <link rel="stylesheet" href="./static/css/utilities.css">-->
+    <link rel="stylesheet" href="static/css/blog.css">
+<!--    <link rel="stylesheet" href="./static/css/typo.css">-->
+<!--    <link rel="stylesheet" href="./static/css/animate.css">-->
+<!--    <link rel="stylesheet" href="./static/lib/prism/prism.css">-->
+<!--    <link rel="stylesheet" href="./static/lib/tocbot/tocbot.css">-->
+    <style>
+        #content{
+            text-align: center;
+            font-family: 隶书;
+        }
+    </style>
 </head>
-<body>
-    <h1>mattester</h1>
+
+<body class="hidden-scrollbar">
+<!-- Script -->
+<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script> -->
+<script src="static/js/jquery-3.1.1.min.js"></script>
+<script src="static/semantic/semantic.min.js"></script>
+<script src="static/lib/prism/prism.js"></script>
+<script src="static/lib/tocbot/tocbot.min.js"></script>
+<script src="static/lib/qrcode/qrcode.min.js"></script>
+<script src="static/js/jquery.scrollTo.min.js"></script>
+<script src="static/lib/waypoints/jquery.waypoints.min.js"></script>
+<!-- 导航 -->
+<nav class="ui inverted attached segment m-shadow-small">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">mattester</h2>
+            <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>首页</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>归档 </a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
+            <div class="right m-item item  m-mobile-hide">
+                <div class="ui icon inverted transparent input">
+                    <input type="text" placeholder="Search...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="ui menu toggle black icon button m-top-right m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+<!-- 中间内容 -->
+<div id="waypoint" class="m-padded-tb-large m-container-small animated fadeIn">
+    <div class="ui container">
+        <!-- 头部 -->
+        <div class="ui top attached segment">
+            <div class="ui horizontal link list">
+                <div class="item">
+                    <img src="images/catlogo.jpg" alt="" class="ui avatar image">
+                    <div class="content"><a href="" class="header">mattester</a></div>
+                </div>
+                <div class="item">
+                    <i class="calendar icon"></i>2017-10-1
+                </div>
+                <div class="item">
+                    <a class="eye icon"></a>687
+                </div>
+            </div>
+        </div>
+        <!-- 图片 -->
+        <div class="ui attached segment">
+            <img src="images/cat.jpg" alt="" class="ui fluid rounded image">
+        </div>
+        <!-- 内容 -->
+        <div class="ui attached padded segment">
+            <!-- 原创标签 -->
+            <div class="ui right aligned basic segment">
+                <div class="ui orange basic label">原创</div>
+            </div>
+
+            <!-- 标题 -->
+            <h2 class="ui center aligned header">未选择的路</h2>
+            </br>
+            <!-- 文章内容 -->
+            <div  id="content" class="js-toc-content typo typo-selection m-padded-lr-responsive m-padded-tb-large">
+                <p>黄色的树林里分出两条路，</p>
+                <p>可惜我不能同时去涉足，</p>
+                <p>我在那路口久久伫立，</p>
+                <p>我向着一条路极目望去，</p>
+                <p>直到它消失在丛林的深处。</p>
+                <p>但我却选了另外一条路，</p>
+                <p>但我却选了另外一条路，</p>
+                <p>显得更诱人、更美丽，</p>
+                <p>虽然在这两条小路上，</p>
+                <p>都很少留下旅人的足迹，</p>
+                <p>虽然那天清晨落叶满地，</p>
+                <p>两条路都未经脚印污染。</p>
+                <p>啊，留下一条路等改日再见！</p>
+                <p>但我知道路径延绵无尽头，</p>
+                <p>恐怕我难以再回返。</p>
+                <p>也许多少年后在某个地方，</p>
+                <p>我将轻声叹息把往事回顾，</p>
+                <p>一片树林里分出两条路，</p>
+                <p>而我选了人迹更少的一条，</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui attached positive message">
+        <!-- 博客信息 -->
+        <div class="ui middle aligned  grid">
+            <div class="eleven wide column">
+                <ui class="list">
+                    <li>作者：mattester（联系作者）</li>
+                    <li>发表时间：2021年1月16日20:03:14</li>
+                    <li>版权声明：自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）</li>
+                    <li>公众号转载：请在文末添加作者公众号二维码</li>
+                </ui>
+            </div>
+<!--            <div class="five wide column">-->
+<!--                <img src="./static/images/WeChat.jpg" alt="" class="ui right float rounded bordered image"-->
+<!--                     style="width: 120px;">-->
+<!--            </div>-->
+        </div>
+    </div>
+<!--    <div id="comment-container" class="ui bottom attached segment">-->
+<!--        &lt;!&ndash; 留言区域列表 &ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="ui teal segment">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="ui threaded comments">&ndash;&gt;-->
+<!--&lt;!&ndash;                <h3 class="ui dividing header">Comments</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="comment">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a class="avatar">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <img src="https://unsplash.it/100/100?image=1005" style="width: 35px;height: 35px;">&ndash;&gt;-->
+<!--&lt;!&ndash;                    </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="content">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a class="author">Matt</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="metadata">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="date">Today at 5:42PM</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="text">&ndash;&gt;-->
+<!--&lt;!&ndash;                            How artistic!&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="actions">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a class="reply">回复</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="comment">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a class="avatar">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <img src="https://unsplash.it/100/100?image=1006" style="width: 35px;height: 35px;">&ndash;&gt;-->
+<!--&lt;!&ndash;                    </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="content">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a class="author">Elliot Fu</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="metadata">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="date">Yesterday at 12:30AM</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="text">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <p>This has been very useful for my research. Thanks as well!</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="actions">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a class="reply">回复</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="comments">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="comment">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a class="avatar">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <img src="https://unsplash.it/100/100?image=1009" style="width: 35px;height: 35px;">&ndash;&gt;-->
+<!--&lt;!&ndash;                            </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="content">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <a class="author">Jenny Hess</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="metadata">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span class="date">Just now</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="text">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    Elliot you are always so right :)&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="actions">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <a class="reply">回复</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="comment">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a class="avatar">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <img src="https://unsplash.it/100/100?image=1008" style="width: 35px;height: 35px;">&ndash;&gt;-->
+<!--&lt;!&ndash;                    </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="content">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a class="author">Joe Henderson</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="metadata">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="date">5 days ago</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="text">&ndash;&gt;-->
+<!--&lt;!&ndash;                            Dude, this is awesome. Thanks so much&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="actions">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a class="reply">回复</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--        <div class="ui form">-->
+<!--&lt;!&ndash;            <div class="field">&ndash;&gt;-->
+<!--&lt;!&ndash;                <textarea name="content" placeholder="请输入评论信息..."></textarea>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--            <div class="fields">-->
+<!--                <div class="field m-mobile-wide m-maagin-bottom-small">-->
+<!--                    <div class="ui left icon input">-->
+<!--                        <i class="user icon"></i>-->
+<!--                        <input type="text" name="nickname" placeholder="姓名">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="field m-mobile-wide m-maagin-bottom-small">-->
+<!--                    <div class="ui left icon input">-->
+<!--                        <i class="mail icon"></i>-->
+<!--                        <input type="text" name="email" placeholder="邮箱">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="ui field m-maagin-bottom-small m-mobile-wide">-->
+<!--                    <button class="ui teal button m-mobile-wide"><i class="edit icon"></i>发布</button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+</div>
+</div>
+</br>
+</br>
+<div class="m-padded-large m-fixd m-right-bottom m-mobile-hide">
+    <div id="toolbar" class="ui vertical icon buttons" style="display: none;">
+        <button type="button" id="toc-button" class="ui teal button">目录</button>
+        <a href="#comment-container" class="ui teal button">留言</a>
+        <button class="ui icon button" id="wechat"><i class="wechat icon"></i></button>
+        <!-- <a href="#" class="ui button"><i class="chevron up icon"></i></a> -->
+        <div id="toTop-button" class="ui button"><i class="chevron up icon"></i></div>
+    </div>
+</div>
+<!-- 目录 -->
+<div class="ui toc-container flowing popup transition hidden" style="width: 250px;">
+    <!-- 生成的目录 -->
+    <ol class="js-toc"></ol>
+</div>
+<div class="ui flowing popup transition hidden" id="wechat-qr" style="width: 100px !important;">
+    <!-- <img src="./static/images/WeChat.jpg" alt="" class="ui rounded image" style="width: 120px !important;"> -->
+</div>
+<!-- 底部footer -->
+<footer class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+            <div class="three wide column">
+                <div class="ui inverted link list">
+<!--                    <div class="item">-->
+<!--                        <img src="./static/images/WeChat.jpg" class="ui rounded image" alt="" style="width: 110px;">-->
+<!--                    </div>-->
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header .m-opacity-mini">最新博客</h4>
+                <div class="ui inverted link list">
+                    <a href="" class="item">用户故事（User Story）</a>
+                    <a href="" class="item">关于刻意练习的清单</a>
+                    <a href="" class="item">失败要趁早</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header .m-opacity-mini">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="" class="item">E-mail：958812201@qq.com</a>
+                    <a href="" class="item">QQ：958812201</a>
+                    <a href="" class="item">Tel：不告诉你</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header .m-opacity-mini">关于我</h4>
+                <p class="m-text-thin m-text-spaced m-text-lined .m-opacity-mini">
+                    这是我的个人博客，会分享关于编程、写作、思考、电路相关的任何内容，希望可以给来到这儿的人有所帮助。</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider "></div>
+        <p class="m-text-thin m-text-spaced m-text-lined .m-opacity-tiny">Copyright © 2021 mattester Designed by
+            mattester</p>
+    </div>
+</footer>
 </body>
+<script>
+    // $('.menu.toggle').click(function(){
+    //     $('.m-item').toggleClass('m-mobile-hide');
+    // });
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    // 赞赏
+    $('#payButton').popup({
+        popup: $('.payQR.popup'),
+        on: 'click',
+        position: 'bottom center'
+    });
+
+    // 目录生成
+    $('#toc-button').popup({
+        popup: $('.toc-container.popup'),
+        on: 'click',
+        position: 'left center'
+    });
+
+    // 目录生成初始化
+    tocbot.init({
+        tocSelector: '.js-toc',
+        contentSelecter: '.js-toc-content',
+        headingSelecter: 'h1, h2, h3'
+    });
+    // 微信扫码查看
+    $('#wechat').popup({
+        popup: $('#wechat-qr'),
+        on: 'hover',
+        position: 'left center'
+    });
+    // 生成二维码
+    var qrcode = new QRCode("wechat-qr", {
+        text: "http://jindo.dev.naver.com/collie",
+        width: 100,
+        height: 100,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+    });
+
+    // 平滑滚动
+    $('#toTop-button').click(function () {
+        $(window).scrollTo(0, 500);
+    });
+
+    // 滚动侦测
+    var waypoint = new Waypoint({
+        element: document.getElementById('waypoint'),
+        handler: function (direction) {
+            // console.log('Scrolled to waypoint! direction：' + direction)
+            if (direction == 'down') {
+                $('#toolbar').show(200);
+            } else {
+                $('#toolbar').hide(500);
+            }
+        }
+    })
+</script>
+
 </html>
